@@ -1,4 +1,3 @@
-
 package com.portfolio.backend.controllers;
 
 import com.portfolio.backend.models.Persona;
@@ -19,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
  *
  * @author edwin
  */
-@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600, allowCredentials="true")
+//@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600, allowCredentials="true")
 @RestController
 @RequestMapping(path = "api/personas")
 public class PersonaController {

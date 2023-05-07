@@ -18,14 +18,31 @@ public class Persona {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    
     private Long personaId;
     
-    private String firstName;
+    private String firstname;
     
-    private String lastName;
+    private String lastname;
+    
+    private String title;
     
     private String description;
     
+    private String profileURL;
+    
     private String imageURL;
+    
+    private String imageURL2;
+    
+    private String imageURL3;
+    
+    private String imageURL4;
+    
+    private String linkedinURL;
+    
+    private String githubURL;
+    
+    private String codepenURL;
     
 }
