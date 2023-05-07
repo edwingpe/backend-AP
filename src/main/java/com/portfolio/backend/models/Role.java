@@ -21,6 +21,7 @@ public class Role {
   @Column(length = 20)
   private ERole name;
 
+  //Constructor
   public Role() {
 
   }
@@ -28,7 +29,8 @@ public class Role {
   public Role(ERole name) {
     this.name = name;
   }
-
+  
+  //Getters & Setters
   public Integer getId() {
     return id;
   }
