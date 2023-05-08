@@ -28,8 +28,8 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping(path = "/experiencia")
+//@CrossOrigin(origins = "http://localhost:4200")
+@RequestMapping(path = "experiencia")
 public class ExperienciaController {
     @Autowired
     ExperienciaService experienciaService;
