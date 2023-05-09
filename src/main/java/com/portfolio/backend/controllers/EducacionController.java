@@ -46,7 +46,7 @@ public class EducacionController {
     }
     
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<?> delete (@PathVariable("id") int id) {
+    public ResponseEntity<?> delete(@PathVariable("id") int id) {
         if(!educacionService.existsById(id))
             return new ResponseEntity("No existe el ID",HttpStatus.BAD_REQUEST);
         educacionService.delete(id);
@@ -68,7 +68,7 @@ public class EducacionController {
         return new ResponseEntity("Educacion creada.",HttpStatus.OK);
     }
     
-    @PutMapping("/update")
+    @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id,@RequestBody EducacionDTO educaciondto){
         //Validaciones si existe el ID
         if(!educacionService.existsById(id))
