@@ -38,8 +38,9 @@ import com.portfolio.backend.security.services.UserDetailsImpl;
  *
  * @author edwin
  */
-//@CrossOrigin(origins = "*", maxAge = 3600)
-@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600, allowCredentials="true")
+
+//@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600, allowCredentials="true")
+@CrossOrigin(origins = "https://frontend-ap-e3657.web.app")
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
