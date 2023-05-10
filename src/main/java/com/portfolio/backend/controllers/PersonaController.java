@@ -32,6 +32,25 @@ public class PersonaController {
     @Autowired
     private PersonaService personaService;
     
+    @PostMapping("/create")
+    public ResponseEntity<?> create(@RequestBody PersonaDTO personadto){
+        Persona persona = new Persona (
+                personadto.getNombre(),
+                personadto.getApellido(),
+                personadto.getTitulo(),
+                personadto.getDescripcion(),
+                personadto.getImageURL(),
+                personadto.getImageURL2(),
+                personadto.getImageURL3(),
+                personadto.getImageURL4(),
+                personadto.getLinkedinURL(),
+                personadto.getCodepenURL(),
+                personadto.getGithubURL(),
+                personadto.getProfileURL());
+        personaService.save(persona);
+        return new ResponseEntity("Persona Creada", HttpStatus.OK);
+    }
+    
     @GetMapping("/traer")
     public ResponseEntity <List<Persona>> list(){
         List<Persona> list = personaService.list();
