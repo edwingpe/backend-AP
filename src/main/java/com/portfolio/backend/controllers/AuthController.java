@@ -40,7 +40,7 @@ import com.portfolio.backend.security.services.UserDetailsImpl;
  */
 
 //@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600, allowCredentials="true")
-@CrossOrigin(origins = "https://frontend-ap-e3657.web.app")
+@CrossOrigin(origins = {"http://localhost:4200", "https://frontend-ap-e3657.web.app"})
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
