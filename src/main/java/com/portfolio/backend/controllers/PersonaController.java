@@ -1,10 +1,13 @@
 package com.portfolio.backend.controllers;
 
+import com.portfolio.backend.DTO.PersonaDTO;
 import com.portfolio.backend.models.Persona;
 import com.portfolio.backend.service.PersonaService;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -23,43 +26,47 @@ import org.springframework.web.bind.annotation.RestController;
 //@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600, allowCredentials="true")
 @CrossOrigin(origins = {"http://localhost:4200", "https://frontend-ap-e3657.web.app"})
 @RestController
-@RequestMapping(path = "api/personas")
+@RequestMapping(path = "/api/personas")
 public class PersonaController {
     
     @Autowired
     private PersonaService personaService;
     
     @GetMapping("/traer")
-    public List<Persona> getAll(){
-        return personaService.getPersonas();
+    public ResponseEntity <List<Persona>> list(){
+        List<Persona> list = personaService.list();
+        return new ResponseEntity(list,HttpStatus.OK);
     }
     
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
-    @PostMapping("/crear")
-    public String crearPersona(@RequestBody Persona persona){
-        personaService.saveOrUpdate(persona);
-        return "Persona creada correctamente";
+    @GetMapping("/detail/{id}")
+    public ResponseEntity<Persona> getById(@PathVariable("id") int id){
+        if(!personaService.existsById(id)){
+            return new ResponseEntity("No existe el ID", HttpStatus.OK);
+        }
+        Persona persona = personaService.getOne(id).get();
+        return new ResponseEntity(persona, HttpStatus.OK);
     }
     
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
-    @DeleteMapping("/borrar/{id}")
-    public String borrarPersona(@PathVariable Long id){
-        personaService.delete(id);
-        return "Persona Eliminada";
-    }
-    
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
-    @PostMapping
-    public void saveUpdate(@RequestBody Persona persona){
-        personaService.saveOrUpdate(persona);
-    }
-    
-    
-    @GetMapping("/{personaId}")
-    public Optional<Persona> getById(@PathVariable("personaId") Long personaId){
-        return personaService.getPersona(personaId);
-    }
-    
+    @PutMapping("/update/{id}")
+    public ResponseEntity<?> update(@PathVariable("id")int id,@RequestBody PersonaDTO personadto){
+        Persona persona = personaService.getOne(id).get();
+        
+        persona.setNombre(personadto.getNombre());
+        persona.setApellido(personadto.getApellido());
+        persona.setTitulo(personadto.getTitulo());
+        persona.setDescripcion(personadto.getDescripcion());
+        persona.setImageURL(personadto.getImageURL());
+        persona.setImageURL2(personadto.getImageURL2());
+        persona.setImageURL3(personadto.getImageURL3());
+        persona.setImageURL4(personadto.getImageURL4());
+        persona.setCodepenURL(personadto.getCodepenURL());
+        persona.setGithubURL(personadto.getGithubURL());
+        persona.setLinkedinURL(personadto.getLinkedinURL());
+        
+        personaService.save(persona);
+     
+        
+        return new ResponseEntity("Persona actualizada", HttpStatus.OK);
 
-    
+    }  
 }
