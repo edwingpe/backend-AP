@@ -30,7 +30,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class PersonaController {
     
     @Autowired
-    private PersonaService personaService;
+    PersonaService personaService;
     
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody PersonaDTO personadto){
