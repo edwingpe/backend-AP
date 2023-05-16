@@ -2,8 +2,11 @@ C:\Users\edwin\OneDrive\Documentos\Portafolio Argentina Programa\backend-AP\src\
 C:\Users\edwin\OneDrive\Documentos\Portafolio Argentina Programa\backend-AP\src\main\java\com\portfolio\backend\controllers\TestController.java
 C:\Users\edwin\OneDrive\Documentos\Portafolio Argentina Programa\backend-AP\src\main\java\com\portfolio\backend\models\Educacion.java
 C:\Users\edwin\OneDrive\Documentos\Portafolio Argentina Programa\backend-AP\src\main\java\com\portfolio\backend\repository\HabilidadesRepository.java
+C:\Users\edwin\OneDrive\Documentos\Portafolio Argentina Programa\backend-AP\src\main\java\com\portfolio\backend\service\ProyectoService.java
 C:\Users\edwin\OneDrive\Documentos\Portafolio Argentina Programa\backend-AP\src\main\java\com\portfolio\backend\controllers\HabilidadesController.java
+C:\Users\edwin\OneDrive\Documentos\Portafolio Argentina Programa\backend-AP\src\main\java\com\portfolio\backend\repository\ProyectoRepository.java
 C:\Users\edwin\OneDrive\Documentos\Portafolio Argentina Programa\backend-AP\src\main\java\com\portfolio\backend\controllers\ExperienciaController.java
+C:\Users\edwin\OneDrive\Documentos\Portafolio Argentina Programa\backend-AP\src\main\java\com\portfolio\backend\models\Proyecto.java
 C:\Users\edwin\OneDrive\Documentos\Portafolio Argentina Programa\backend-AP\src\main\java\com\portfolio\backend\payload\response\UserInfoResponse.java
 C:\Users\edwin\OneDrive\Documentos\Portafolio Argentina Programa\backend-AP\src\main\java\com\portfolio\backend\DTO\PersonaDTO.java
 C:\Users\edwin\OneDrive\Documentos\Portafolio Argentina Programa\backend-AP\src\main\java\com\portfolio\backend\models\Experiencia.java
@@ -17,6 +20,7 @@ C:\Users\edwin\OneDrive\Documentos\Portafolio Argentina Programa\backend-AP\src\
 C:\Users\edwin\OneDrive\Documentos\Portafolio Argentina Programa\backend-AP\src\main\java\com\portfolio\backend\repository\RoleRepository.java
 C:\Users\edwin\OneDrive\Documentos\Portafolio Argentina Programa\backend-AP\src\main\java\com\portfolio\backend\repository\EducacionRepository.java
 C:\Users\edwin\OneDrive\Documentos\Portafolio Argentina Programa\backend-AP\src\main\java\com\portfolio\backend\DTO\ExperienciaDTO.java
+C:\Users\edwin\OneDrive\Documentos\Portafolio Argentina Programa\backend-AP\src\main\java\com\portfolio\backend\DTO\ProyectoDTO.java
 C:\Users\edwin\OneDrive\Documentos\Portafolio Argentina Programa\backend-AP\src\main\java\com\portfolio\backend\service\EducacionService.java
 C:\Users\edwin\OneDrive\Documentos\Portafolio Argentina Programa\backend-AP\src\main\java\com\portfolio\backend\repository\ExperienciaRepository.java
 C:\Users\edwin\OneDrive\Documentos\Portafolio Argentina Programa\backend-AP\src\main\java\com\portfolio\backend\controllers\PersonaController.java
@@ -28,6 +32,7 @@ C:\Users\edwin\OneDrive\Documentos\Portafolio Argentina Programa\backend-AP\src\
 C:\Users\edwin\OneDrive\Documentos\Portafolio Argentina Programa\backend-AP\src\main\java\com\portfolio\backend\security\services\UserDetailsServiceImpl.java
 C:\Users\edwin\OneDrive\Documentos\Portafolio Argentina Programa\backend-AP\src\main\java\com\portfolio\backend\service\PersonaService.java
 C:\Users\edwin\OneDrive\Documentos\Portafolio Argentina Programa\backend-AP\src\main\java\com\portfolio\backend\security\jwt\AuthEntryPointJwt.java
+C:\Users\edwin\OneDrive\Documentos\Portafolio Argentina Programa\backend-AP\src\main\java\com\portfolio\backend\controllers\ProyectoController.java
 C:\Users\edwin\OneDrive\Documentos\Portafolio Argentina Programa\backend-AP\src\main\java\com\portfolio\backend\models\Persona.java
 C:\Users\edwin\OneDrive\Documentos\Portafolio Argentina Programa\backend-AP\src\main\java\com\portfolio\backend\security\jwt\AuthTokenFilter.java
 C:\Users\edwin\OneDrive\Documentos\Portafolio Argentina Programa\backend-AP\src\main\java\com\portfolio\backend\security\jwt\JwtUtils.java
